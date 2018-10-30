@@ -55,7 +55,6 @@ router.put('/:id', jwtAuth, (req, res) => {
   if (requiredFields) {
     Workout.findByIdAndUpdate(req.params.id, {$set: {name: req.body.name, type: req.body.type, weight: req.body.weight, reps: req.body.reps, date: req.body.date, comments: req.body.comments}}, {new: true})
     .then(workout => {
-      console.log(workout);
       res.status(200).json(workout.serialize());
     })
     .catch(err => {
