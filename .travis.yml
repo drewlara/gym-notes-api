@@ -7,3 +7,4 @@ deploy:
   app: gym-notes-api
   on:
     repo: drewlara/gym-notes-api
+
