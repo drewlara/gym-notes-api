@@ -1,0 +1,9 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: KjMtTw/yLsyaNaCTwuuyMIpNVuKMHJ9dShSEonwz/yJ6ZRhdrRML3JS7P1Z7HycMe2a5UT5Qg4faHW050NznYREqRTXNNUf1yRPwBIxl/Z6cPRhhMQzilqWFsbQkT7uGihY2/1zXH2uW2vKY6mKWMcUn9dIfJI+n4EhvUm7EbU8tnIpqLGrP6EPXVH70DE+aLigUE/iEW3GufjNdVfl5KvIytgrUZ70//OiKCj1P4C65F7X+6ScLmuJJGtKnvdkSiJOrZBZi4uZh9SbeRxppYYDi0XZxhoao2+rQiX2y/TbVu54bksk1u2fA8Rq7/5eG4/smjQF7m8zW5yBM39gRsRwDncQ1nmy45yhgN3UGwbcyZLO9fyHNAHZU1J3r99+X3zbWBtx3MFxvrleRavbrxJk7u3Yihh4ZVClT2fFr0tDPtZ02TVhwXoqwMMTNSDfoLdjg5yVQMpI4eUAeoU6h7uqobe/eMkbBypjMyRhDNBC33KQWN4/gRqUX+tPh1qwHN9A/H7x1Bhs31ndkZPJ4ObtGEregPmsgADrXqk+EFY8JTYxIe9XfWZ4NrlAm0JX1ETguxO0Z7QzmkIwKJB4Lzd84H4OchHfP1nTWRIIOBbilgo0UnyRYzoGdiN1SUUnAXQkMBZh9w75UsP515avRXK8Y8GhReT0FRKkPkp/1fDQ=
+  app: gym-notes-api
+  on:
+    repo: drewlara/gym-notes-api
