@@ -3,9 +3,7 @@ const express = require('express');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const router = express.Router();
-const { Workout } = require('./models')
-//const uuid = require('uuid');
-//const moment = require('moment');
+const { Workout } = require('./models');
 
 router.use(bodyParser.json());
 const jwtAuth = passport.authenticate('jwt', {session: false});
@@ -55,8 +53,9 @@ router.post('/', jwtAuth, (req, res) => {
 router.put('/:id', jwtAuth, (req, res) => {
   const requiredFields = req.body.name && req.body.type && req.body.weight && req.body.reps && req.body.date;
   if (requiredFields) {
-    Workout.findByIdAndUpdate(req.params.id, {$set: {name: req.body.name, type: req.body.type, weight: req.body.weight, reps: req.body.reps, date: req.body.date}}, {new: true})
+    Workout.findByIdAndUpdate(req.params.id, {$set: {name: req.body.name, type: req.body.type, weight: req.body.weight, reps: req.body.reps, date: req.body.date, comments: req.body.comments}}, {new: true})
     .then(workout => {
+      console.log(workout);
       res.status(200).json(workout.serialize());
     })
     .catch(err => {

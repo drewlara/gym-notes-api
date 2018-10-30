@@ -40,7 +40,8 @@ WorkoutSchema.methods.serialize = function() {
     weight: this.weight,
     reps: this.reps,
     date: this.date,
-    comments: this.comments
+    comments: this.comments,
+    author: this.user
   }
 }
 
